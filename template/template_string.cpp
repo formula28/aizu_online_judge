@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <string>
+#include <cstdlib>
 using namespace std;
 
 int main() {
@@ -38,6 +39,11 @@ int main() {
     cout << (int) s1.find("mno", 4) << endl; // s1[4]から末尾に向かって検索し、マッチした場合は位置を返却.
     cout << (int) s1.find("ab", 4) << endl; // マッチしない場合.
     cout << (int) s1.rfind("y", 24) << endl; // 先頭方向へ検索.
+
+    // 数値変換.
+    // 参考 http://marycore.jp/prog/c-lang/convert-string-to-number-in-c/
+    s1 = "100";
+    cout << atoi(s1.c_str()) << endl;
 
     return 0;
 }
