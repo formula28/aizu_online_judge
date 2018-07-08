@@ -1,0 +1,62 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "c++ build",
+            "type": "shell",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "focus":true
+            }
+        },
+        {
+            "label": "c++ test",
+            "type": "shell",
+            "command": "cd ${fileDirname} & bash -c './test.sh testcase.txt'",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus":true
+            }
+        },
+        {
+            "label": "c++ build & test",
+            "type": "shell",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt'",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "focus":true
+            }
+        },
+        {
+            "label": "c++ build & test clean",
+            "type": "shell",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt' & bash -c 'rm -f ./a.exe ./test.sh'",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "focus":true
+            }
+        }
+    ]
+}
