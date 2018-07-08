@@ -6,7 +6,7 @@
         {
             "label": "c++ build",
             "type": "shell",
-            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -O2 -o a.exe",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -35,7 +35,7 @@
         {
             "label": "c++ build & test",
             "type": "shell",
-            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt'",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt'",
             "group": "build",
             "problemMatcher": [
                 "$gcc"
@@ -48,7 +48,7 @@
         {
             "label": "c++ build & test clean",
             "type": "shell",
-            "command": "cd ${fileDirname} & g++ ${fileBasename} -Wall -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt' & bash -c 'rm -f ./a.exe ./test.sh'",
+            "command": "cd ${fileDirname} & g++ ${fileBasename} -O2 -o a.exe & bash -c 'if [ ! -e test.sh ]; then cp ../test/test.sh ./; fi; ./test.sh testcase.txt' & bash -c 'rm -f ./a.exe ./test.sh'",
             "group": "build",
             "problemMatcher": [
                 "$gcc"
