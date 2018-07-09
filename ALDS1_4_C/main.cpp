@@ -3,8 +3,8 @@ AOJ ALDS1_4_C: Dictionary
 http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_C
 
 result:
-http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=3011912
-Judge: 10/10 	C++ 	CPU: 00:06 sec 	Memory: 7716 KB 	Length: 359 B 	2018-07-09 23:30
+http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=3011989
+Judge: 10/10 	C++ 	CPU: 01:60 sec 	Memory: 32572 KB 	Length: 467 B 	2018-07-09 23:56
 */
 #include <iostream>
 #include <string>
